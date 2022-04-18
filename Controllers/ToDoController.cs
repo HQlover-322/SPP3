@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace back.Controllers
 {
     [Route("api/[controller]")]
+    [Authorize]
     public class ToDoController : ControllerBase
     {
         private readonly ILogger<ToDoController> _logger;
