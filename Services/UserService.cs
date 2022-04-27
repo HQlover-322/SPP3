@@ -7,6 +7,7 @@ using back.Entity;
 using back.Models;
 using Microsoft.AspNetCore.Identity;
 using BC = BCrypt.Net.BCrypt;
+using Microsoft.AspNetCore.Mvc;
 
 namespace back.Services
 {

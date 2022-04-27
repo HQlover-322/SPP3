@@ -19,8 +19,9 @@ namespace back.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            //await _toDoService.GetNewTasks()
-            return Ok(await _toDoService.GetNewTasks()); 
+            var tasks = await _toDoService.GetNewTasks();
+            if (tasks is  null) return BadRequest();
+            return Ok(tasks);
         }
 
         [HttpGet("{id}")]

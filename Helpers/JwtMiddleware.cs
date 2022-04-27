@@ -19,7 +19,6 @@ namespace back
 
         public async Task Invoke(HttpContext context, IUserService userService)
         {
-            //var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 
             var token = context.Request.Cookies["Authorization"];
             if (token != null)

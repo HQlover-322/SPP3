@@ -16,7 +16,7 @@ namespace back.Controllers
         }
 
         [HttpPost("authenticate")]
-        public async Task<IActionResult> Authenticate(AuthenticateRequest model)
+        public async Task<IActionResult> Authenticate([FromForm]AuthenticateRequest model)
         {
             var response = await _userService.Authenticate(model);
 
